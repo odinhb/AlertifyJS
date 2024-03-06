@@ -229,7 +229,7 @@ module.exports = function (grunt) {
     grunt.loadNpmTasks('grunt-banner');
 
     // Default task
-    grunt.registerTask('css', ['less', 'postcss:build', 'rtlcss', 'copy:rtl', 'copy:ltr', 'cssmin', 'usebanner']);
+    grunt.registerTask('css', ['less', 'rtlcss', 'copy:rtl', 'copy:ltr', 'cssmin', 'usebanner']);
     grunt.registerTask('build', ['clean:build', 'css', 'concat', 'uglify', 'compress', 'copy:build']);
     grunt.registerTask('default', ['build', 'jshint']);
 };
